@@ -41,6 +41,7 @@ public class SumAlgorithm {
      *
      * @param target 目标参数
      * @return 两参数之和的数组索引
+     * // 之和
      */
     public int[] getArrayIndex2(int target) {
         int[] result = new int[2];
