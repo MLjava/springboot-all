@@ -1,0 +1,6 @@
+fish/study/dao/IRoleDAOTest.class
+fish/study/dao/IRolePermissionDAOTest.class
+fish/study/SpringSecurityApplicationTest.class
+fish/study/security/SpringSecurityUserDetailsServiceTest.class
+fish/study/dao/IPermissionDAOTest.class
+fish/study/dao/IUserRoleDAOTest.class

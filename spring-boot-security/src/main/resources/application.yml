@@ -1,0 +1,23 @@
+server:
+  port: 8082
+#  配置数据库
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useSSL=false&serverTimezone=GMT%2b8&allowPublicKeyRetrieval=true
+    username: root
+    password: yalove580230
+  thymeleaf:
+    cache: false
+#    配置mybatis的SQL日志
+logging:
+  level:
+    fish.study.dao: debug
+spring-security:
+  ignore-urls: /code/*,/mobile
+  mobile:
+    expire-time: 10
+  verification:
+    expire-time: 10
+    open-verification: false
+  rest-authentication: true

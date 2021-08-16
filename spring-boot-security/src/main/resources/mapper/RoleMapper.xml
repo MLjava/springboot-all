@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="fish.study.dao.IRoleDAO">
+
+    <resultMap id="BaseMapper" type="fish.study.entity.RoleEntity">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="enable" property="enable"/>
+        <result column="create_time" property="createTime"/>
+        <result column="modify_time" property="modifyTime"/>
+        <result column="create_user" property="createUser"/>
+        <result column="modify_user" property="modifyUser"/>
+    </resultMap>
+
+
+    <!--  根据用户信息获取权限  -->
+    <select id="listRolesByUser" resultMap="BaseMapper" parameterType="java.lang.Long">
+        SELECT
+            c.id,
+            c.`name`,
+            c.`enable`,
+            c.create_time,
+            c.modify_time,
+            c.create_user,
+            c.modify_user
+        FROM
+            `user` a
+            LEFT JOIN user_role b ON a.id = b.user_id
+            LEFT JOIN role c ON b.role_id = c.id
+        WHERE
+            a.id = #{userId}
+            AND c.`enable` = 1
+    </select>
+
+</mapper>

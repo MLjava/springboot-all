@@ -1,0 +1,5 @@
+fish/study/config/MyBatisPlusObjectHandler.class
+fish/study/entity/TestEntity.class
+fish/study/SpringBootMyBatisPlusApplication.class
+fish/study/config/MyBatisPlusConfig.class
+fish/study/mapper/ITestMapper.class

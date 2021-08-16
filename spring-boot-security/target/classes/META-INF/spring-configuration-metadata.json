@@ -1,0 +1,136 @@
+{
+  "groups": [
+    {
+      "name": "spring-boot",
+      "type": "fish.study.properties.SpringBootProperties",
+      "sourceType": "fish.study.properties.SpringBootProperties"
+    },
+    {
+      "name": "spring-security",
+      "type": "fish.study.properties.SpringSecurityProperties",
+      "sourceType": "fish.study.properties.SpringSecurityProperties"
+    },
+    {
+      "name": "spring-security.mobile",
+      "type": "fish.study.properties.SpringSecurityProperties$Mobile",
+      "sourceType": "fish.study.properties.SpringSecurityProperties",
+      "sourceMethod": "getMobile()"
+    },
+    {
+      "name": "spring-security.verification",
+      "type": "fish.study.properties.SpringSecurityProperties$Verification",
+      "sourceType": "fish.study.properties.SpringSecurityProperties",
+      "sourceMethod": "getVerification()"
+    },
+    {
+      "name": "spring-social",
+      "type": "fish.study.properties.SpringSocialProperties",
+      "sourceType": "fish.study.properties.SpringSocialProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring-boot.page404-url",
+      "type": "java.lang.String",
+      "sourceType": "fish.study.properties.SpringBootProperties",
+      "defaultValue": "\/404"
+    },
+    {
+      "name": "spring-security.ignore-urls",
+      "type": "java.lang.String[]",
+      "description": "spring security动态地址不拦截配置",
+      "sourceType": "fish.study.properties.SpringSecurityProperties"
+    },
+    {
+      "name": "spring-security.ignores-resources",
+      "type": "java.lang.String[]",
+      "description": "spring security静态资源不拦截配置",
+      "sourceType": "fish.study.properties.SpringSecurityProperties",
+      "defaultValue": [
+        "\/css\/**",
+        "\/js\/**",
+        "\/images\/**",
+        "\/fonts\/**",
+        "\/lib\/**",
+        "\/icon\/**",
+        "\/tools\/**",
+        "\/svg\/**"
+      ]
+    },
+    {
+      "name": "spring-security.index-page-url",
+      "type": "java.lang.String",
+      "description": "spring security登录页面配置",
+      "sourceType": "fish.study.properties.SpringSecurityProperties",
+      "defaultValue": "\/index\/page"
+    },
+    {
+      "name": "spring-security.login-process-url",
+      "type": "java.lang.String",
+      "description": "spring security登录认证路径",
+      "sourceType": "fish.study.properties.SpringSecurityProperties",
+      "defaultValue": "\/spring\/security\/login"
+    },
+    {
+      "name": "spring-security.mobile.expire-time",
+      "type": "java.lang.Long",
+      "sourceType": "fish.study.properties.SpringSecurityProperties$Mobile",
+      "defaultValue": 2
+    },
+    {
+      "name": "spring-security.mobile.length",
+      "type": "java.lang.Integer",
+      "description": "短信验证码长度",
+      "sourceType": "fish.study.properties.SpringSecurityProperties$Mobile",
+      "defaultValue": 6
+    },
+    {
+      "name": "spring-security.mobile.mobile-authentication-url",
+      "type": "java.lang.String",
+      "description": "手机号登录验证路径",
+      "sourceType": "fish.study.properties.SpringSecurityProperties$Mobile",
+      "defaultValue": "\/spring\/security\/mobile"
+    },
+    {
+      "name": "spring-security.mobile.mobile-code-urls",
+      "type": "java.lang.String[]",
+      "description": "用户自定义",
+      "sourceType": "fish.study.properties.SpringSecurityProperties$Mobile"
+    },
+    {
+      "name": "spring-security.rest-authentication",
+      "type": "java.lang.Boolean",
+      "description": "开启前后段分离认证标识",
+      "sourceType": "fish.study.properties.SpringSecurityProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "spring-security.verification.expire-time",
+      "type": "java.lang.Long",
+      "description": "验证码过期时间",
+      "sourceType": "fish.study.properties.SpringSecurityProperties$Verification",
+      "defaultValue": 2
+    },
+    {
+      "name": "spring-security.verification.length",
+      "type": "java.lang.Integer",
+      "description": "code长度",
+      "sourceType": "fish.study.properties.SpringSecurityProperties$Verification"
+    },
+    {
+      "name": "spring-security.verification.open-verification",
+      "type": "java.lang.Boolean",
+      "description": "开启验证码匹配",
+      "sourceType": "fish.study.properties.SpringSecurityProperties$Verification",
+      "defaultValue": true
+    },
+    {
+      "name": "spring-security.verification.verification-urls",
+      "type": "java.lang.String[]",
+      "description": "需要验证码的路径",
+      "sourceType": "fish.study.properties.SpringSecurityProperties$Verification",
+      "defaultValue": []
+    }
+  ],
+  "hints": []
+}

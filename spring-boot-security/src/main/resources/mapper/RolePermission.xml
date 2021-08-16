@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="fish.study.dao.IRolePermissionDAO">
+
+    <!-- 批量添加角色资源   -->
+    <insert id="insertBatch" parameterType="fish.study.entity.RolePermissionEntity">
+        INSERT INTO role_permission (role_id, permission_id, modify_time, create_time, modify_user, create_user)
+        VALUES
+        <foreach collection="rolePermissions" item="entity" separator=",">
+            (
+               #{entity.roleId},
+               #{entity.permissionId},
+               #{entity.modifyTime},
+               #{entity.createTime},
+               #{entity.modifyUser},
+               #{entity.createUser}
+            )
+        </foreach>
+    </insert>
+
+
+
+</mapper>

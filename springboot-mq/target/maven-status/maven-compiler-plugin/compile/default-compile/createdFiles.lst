@@ -1,0 +1,5 @@
+fish/study/MqApplication.class
+fish/study/contoller/MqController.class
+fish/study/producer/MqProducer.class
+fish/study/config/RabbitMqConfiguration.class
+fish/study/consumer/MqConsumer.class

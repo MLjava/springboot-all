@@ -1,0 +1,13 @@
+server:
+  port: 8085
+spring:
+  rabbitmq:
+    port: 5672
+    username: guest
+    password: guest
+    host: 127.0.0.1
+    template:
+      receive-timeout: 3000
+      reply-timeout: 3000
+      retry:
+        enabled: true

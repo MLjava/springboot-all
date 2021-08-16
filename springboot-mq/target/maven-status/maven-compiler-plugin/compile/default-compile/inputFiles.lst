@@ -1,0 +1,7 @@
+/Users/Money/study/springboot-all/springboot-mq/src/main/java/fish/study/producer/KafkaProducer.java
+/Users/Money/study/springboot-all/springboot-mq/src/main/java/fish/study/config/RabbitMqConfiguration.java
+/Users/Money/study/springboot-all/springboot-mq/src/main/java/fish/study/contoller/MqController.java
+/Users/Money/study/springboot-all/springboot-mq/src/main/java/fish/study/consumer/MqConsumer.java
+/Users/Money/study/springboot-all/springboot-mq/src/main/java/fish/study/consumer/KafkaConsumer.java
+/Users/Money/study/springboot-all/springboot-mq/src/main/java/fish/study/MqApplication.java
+/Users/Money/study/springboot-all/springboot-mq/src/main/java/fish/study/producer/MqProducer.java

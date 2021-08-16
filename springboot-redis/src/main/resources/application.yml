@@ -1,0 +1,6 @@
+server:
+  port: 8084
+spring:
+  redis:
+    password: yalove,123
+    database: 0

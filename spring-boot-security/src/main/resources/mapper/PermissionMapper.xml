@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="fish.study.dao.IPermissionDAO">
+
+    <resultMap id="BaseMap" type="fish.study.entity.PermissionEntity">
+        <id column="id" property="id"/>
+        <result column="name" property="name" />
+        <result column="enable" property="enable" />
+        <result column="create_user" property="createUser"/>
+        <result column="modify_user" property="modifyUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="modify_time" property="modifyTime"/>
+    </resultMap>
+
+    <!-- 查询当前角色有哪些资源   -->
+    <select id="listPermissionsByRole" resultMap="BaseMap" parameterType="java.lang.Long">
+       SELECT
+            c.id,
+            c.`name`,
+            c.action_url,
+            c.`enable`,
+            c.modify_time,
+            c.create_time,
+            c.modify_user,
+            c.create_user
+        FROM
+            role a
+            LEFT JOIN role_permission b ON a.id = b.role_id
+            LEFT JOIN permission c ON c.id = b.permission_id
+        WHERE
+            c.`enable` = 1
+            AND b.role_id = #{roleId}
+    </select>
+
+</mapper>
